@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:montserrat;
+    color: white;
+    overflow: hidden;
+    background-color: black;
+    overflow: auto;
+}
+
+nav
+{
+    height: 80px;
+    width: 100%;
+    margin-top: -25px;
+}
+
+label.logo
+{
+    color: white;
+    font-size: 555px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul
+{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li
+{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+/*
+*/
+nav ul li a
+{
+    color: white;
+    font-size: 17px;
+    padding:7px 50px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover
+{
+    background: rgb(156, 46, 53);
+    transition: .5s;
+}
+
+.checkbtn
+{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check
+{
+    display: none;
+}
+
+@media(max-width: 952px)
+{
+    label.logo
+    {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+}
+@media(max-width: 858px)
+{
+    .checkbtn
+    {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li
+    {
+        display: block;
+    }
+    nav ul li a
+    {
+        font-size: 20px;
+    }
+    a:hover, a:active
+    {
+        background: none;
+        
+    }
+    #check:checked ~ ul
+    {
+        left: 0;
+
+    }
+}
+
+
+.bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.hdqwalls.com/download/orange-space-5k-me-1366x768.jpg') no-repeat fixed;
+    background-size: cover;
+    animation: scaling 60s linear infinite;
+    overflow: auto;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ol {
+    list-style-type: none;
+    display: flex;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.mars {
+    position: absolute;
+    animation: movement 60s linear infinite;
+}
+
+@keyframes movement {
+    0% {
+        width: 20rem;
+        top: 10%;
+        right: 30%;
+        transform: rotate(0deg);
+    }
+    50% {
+        width: 50rem;
+        top: 20%;
+        right: -10%;
+        transform: rotate(180deg);
+    }
+    100% {
+        width: 20rem;
+        top: 10%;
+        right: 30%;
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+header>a {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header ol li {
+    font-weight: 600;
+    padding: 0 20px;
+    opacity: 0.6;
+}
+
+header ol li:first-child {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+main {
+    padding-top: 5%;
+}
+
+main>p {
+    max-width: 50%;
+    opacity: 0.75;
+    font-size: 13px;
+}
+
+.d-flex {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.d-flex a {
+    margin-right: 50px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.d-flex a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.d-flex a:first-child span {
+    background: maroon;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.d-flex a:last-child span {
+    height: 20px;
+    width: 20px;
+    font-size: 7px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+ol.info {
+    padding-top: 5%;
+}
+
+ol.info li {
+    flex: 0 0 30%;
+}
+
+ol.info li h5 {
+    margin-bottom: 10px;
+}
+
+ol.info li h4 {
+    margin-bottom: 10px;
+}
+
+ol.info li p {
+    padding-right: 20%;
+    opacity: 0.75;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0px;
+    text-align: center;
+    z-index: 999;
+}
+
+h4
+{
+    font-size: medium;
+    font-weight: 200;
+}
+
+footer p {
+    margin: 5px 0;
+    margin-left: 900px;
+}
+
+footer i {
+    color: red;
+    margin: 0 10px;
+}
+
+footer a {
+    color: rgb(17, 176, 168);
+    text-decoration: none;
+}
